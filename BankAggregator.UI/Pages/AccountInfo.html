@@ -1,0 +1,71 @@
+﻿<hr />
+<div class="row">
+    <div class="col-md-8">
+        <div class="panel panel-primary" id="panelLatestMovies">
+            <div class="panel-heading">
+                <h3 class="panel-title">Account Information</h3>
+            </div>
+
+            <div class="panel-body">
+                <div ng-if="loadingAccount">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4">
+                        <i class="fa fa-refresh fa-5x fa-spin"></i> <label class="label label-primary">Loading account...</label>
+                    </div>
+                    <div class="col-xs-4"></div>
+                </div>
+                <div class="col-xs-4 col-sm-12 movie" ng-repeat="account in Accounts">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                           
+                                {{account.AccountType}} Account No.: {{account.AccountNumber}}, {{account.Branch}}
+                               
+                            <i class="pull-right">Closing Balance: {{account.Balance |currency:"£"}}</i>
+                                
+                                <hr />
+                                <table class="table table-bordered">
+                                    <thead class="active">
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Withdrawl</th>
+                                            <th>Deposite</th>
+                                            <th>Reference</th>
+                                        </tr>
+                                    </thead>
+                                    <tr ng-repeat="transaction in Transactions">
+                                        <td>{{transaction.TransactionDate}}</td>
+                                        <td>{{transaction.Debit}}</td>
+                                        <td>{{transaction.Credit}}</td>
+                                        <td>{{transaction.Reference}}</td>
+                                    </tr>
+                                </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{offer}}
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-success" id="panelMovieGenres">
+            <div class="panel-heading">
+                <h3 class="panel-title">Personalised Offers</h3>
+            </div>
+
+            <div class="panel-body">
+                <div ng-if="loadingGenres">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4"><i class="fa fa-refresh fa-5x fa-spin"></i> <label class="label label-primary">Loading Genres..</label></div>
+                    <div class="col-xs-4"></div>
+                </div>
+                
+            </div>
+            <div ng-repeat="offer in offers">
+                <div class="panel-footer">
+                    <img class="img-responsive" style="height:120px; width:100%" ng-src="../../Content/images/movies/{{offer.OfferLink}}" alt="" />
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

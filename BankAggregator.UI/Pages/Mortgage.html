@@ -1,0 +1,24 @@
+﻿<hr />
+
+<div class="row">
+    <form role="form" novalidate angular-validator name="addCustomerForm" angular-validator-submit="Register()">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <div class="form-group">
+                    <input type="text" class="form-control" ng-model="amount" name="amount" id="amount" placeholder="Total Amount"
+                           validate-on="blur" required required-message="'First Name is required'">
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <input type="text" class="form-control" ng-model="newCustomer.LastName" name="timespan" id="timespan" placeholder="Duration in Years"
+                           validate-on="blur" required required-message="'Last Name is required'">
+
+                </div>
+            </div>
+          
+            <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+        </div>
+    </form>
+</div>

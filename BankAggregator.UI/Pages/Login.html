@@ -1,0 +1,24 @@
+﻿<hr />
+
+<div class="row">
+    <form role="form">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <div class="form-group">
+                    <input type="text" class="form-control" ng-model="username" name="username" id="username" placeholder="User Name"
+                           validate-on="blur" required required-message="'User Name is required'">
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <input type="password" class="form-control"  placeholder="Password"
+                           validate-on="blur" required required-message="'Password is required'">
+
+                </div>
+            </div>
+
+            <input type="submit" value="Login" class="btn btn-info pull-right" ng-click="Login()">
+        </div>
+    </form>
+</div>

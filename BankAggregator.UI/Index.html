@@ -1,0 +1,56 @@
+﻿<html ng-app="BankAggregator">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Place</title>
+
+    <!--/Css -->
+    <link href="Content/css/site.css" rel="stylesheet" />
+    <link href="Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="Content/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Content/css/font-awesome.css" rel="stylesheet" />
+    <link href="Content/css/morris.css" rel="stylesheet" />
+    <link href="Content/css/toastr.css" rel="stylesheet" />
+    <link href="Content/css/jquery.fancybox.css" rel="stylesheet" />
+    <link href="Content/css/loading-bar.css" rel="stylesheet" />
+
+    <!--/row-offcanvas -->
+    <script src="Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <top-bar></top-bar>
+    <div class="row-offcanvas row-offcanvas-left">
+        <side-bar></side-bar>
+        <div id="main">
+            <div class="col-md-12">
+                <p class="visible-xs">
+                    <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                </p>
+                <div class="page {{ pageClass }}" ng-view></div>
+            </div>
+        </div>
+    </div><!--/row-offcanvas -->
+
+    <!--/Vendors scripts -->
+
+    <script src="Scripts/Vendors/jquery.js"></script>
+    <script src="Scripts/Vendors/bootstrap.js"></script>
+    <script src="Scripts/Vendors/toastr.js"></script>
+    <script src="Scripts/Vendors/jquery.raty.js"></script>
+    <script src="Scripts/Vendors/respond.src.js"></script>
+    <script src="Scripts/Vendors/angular.js"></script>
+    <script src="Scripts/Vendors/angular-route.js"></script>
+    <script src="Scripts/Vendors/angular-cookies.js"></script>
+    <script src="Scripts/Vendors/angular-validator.js"></script>
+    <script src="Scripts/Vendors/ui-bootstrap-tpls-0.13.1.js"></script>
+    <script src="Scripts/Vendors/loading-bar.js"></script>
+    
+    <!--/Spa -->
+    <script src="Scripts/spa/app.js"></script>
+    <script src="Scripts/spa/loginCtrl.js"></script>
+    <script src="Scripts/spa/accountCtrl.js"></script>
+    <script src="Scripts/spa/homeCtrl.js"></script>
+    <script src="Scripts/spa/sidebar.directive.js"></script>
+    <script src="Scripts/spa/topBar.directive.js"></script>
+</body>
+</html>
